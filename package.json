@@ -1,0 +1,16 @@
+{
+  "name": "@quentinadam/sqlite",
+  "version": "1.0.0",
+  "description": "sqlite bindings",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "node-gyp rebuild"
+  },
+  "author": "Quentin Adam",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.6.2",
+    "node-gyp": "^7.1.0"
+  }
+}
