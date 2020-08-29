@@ -25,7 +25,11 @@ void Statement::bindDouble(int index, double value) {
 }
 
 void Statement::bindText(int index, string value) {
-  if (sqlite3_bind_text(handle, index, value.c_str(), -1, NULL)) {
+  char* copiedValue = new char[value.size() + 1];
+  strcpy(copiedValue, value.c_str());
+  if (sqlite3_bind_text(handle, index, copiedValue, -1, [](void* data) {
+    delete[] ((char*) data);
+  })) {
     ostringstream message;  
     message << "Could not bind text " << value << " at index " << index << " of query \"" << sql << "\"";
     database->throwError(message);
