@@ -3,8 +3,8 @@
         "target_name": "sqlite",
         "sources": [
           "./src/Database.cc",
-          "./src/main.cc",
           "./src/Statement.cc",
+          "./src/main.cc",
           "./src/sqlite3.c",
         ],
         'cflags!': [
