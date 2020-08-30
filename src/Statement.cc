@@ -1,3 +1,4 @@
+#include <string.h>
 #include "Statement.h"
 #include "Exception.h"
 #include "Database.h"
