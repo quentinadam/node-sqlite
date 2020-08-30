@@ -40,7 +40,7 @@ class Statement {
 
     int columnValueInt(int index);
 
-    int columnValueDouble(int index);
+    double columnValueDouble(int index);
 
     string columnValueText(int index);
 
