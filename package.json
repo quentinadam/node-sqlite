@@ -1,6 +1,6 @@
 {
   "name": "@quentinadam/sqlite",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "sqlite bindings",
   "main": "index.js",
   "types": "index.d.ts",

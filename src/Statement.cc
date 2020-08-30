@@ -72,7 +72,7 @@ int Statement::columnValueInt(int index)  {
   return sqlite3_column_int(handle, index);
 }
 
-int Statement::columnValueDouble(int index)  {
+double Statement::columnValueDouble(int index)  {
   return sqlite3_column_double(handle, index);
 }
 
