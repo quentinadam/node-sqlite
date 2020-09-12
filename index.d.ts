@@ -1,7 +1,11 @@
+/// <reference types="node" />
 export default class Database {
-  constructor(name: string);
-  query(sql: string, ...parameters: (string | number | boolean | Buffer | null | undefined)[]): {
-    [key: string]: string | number | null | Buffer;
-  }[];
-  close(): void;
+    private handle;
+    constructor(name: string);
+    query<T extends {
+        [key: string]: string | number | null | Buffer;
+    } = {
+        [key: string]: string | number | null | Buffer;
+    }>(sql: string, ...parameters: (string | number | boolean | Buffer | null | undefined)[]): T[];
+    close(): void;
 }
